@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block bottom %}
+
+<p>login</p>
+<form action="/login" method="post">
+    {% module xsrf_form_html() %}
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" /><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" /><br>
+    <input type="submit" value="登录">
+</form>
+
+{% end %}

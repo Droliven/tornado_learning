@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block bottom %}
+<p>information</p>
+<form action="/edit/{{ user['_id'] }}" method="post">
+    {% module xsrf_form_html() %}
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" value="{{ user['username'] }}" /><br>
+    <input type="submit" value="修改" />
+</form>
+{% end %}

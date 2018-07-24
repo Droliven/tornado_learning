@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block bottom %}
+<p>hello</p>
+{% for user in users %}
+<ul>
+    <li>{{ user['username'] }}</li>-<a href="/edit/{{ user['_id'] }}">修改</a>-<a href="/delete/{{ user['_id'] }}">删除</a>
+</ul>
+{% end %}
+{% end %}

@@ -1,0 +1,9 @@
+<a href="/">index</a>-
+{% if current_user %}
+<a href="/logout">注销</a>-
+{{ current_user['username'] }}
+{% else %}
+<a href="/register">注册</a>-
+<a href="/login">登录</a>
+{% end %}
+{% block bottom %}{% end %}
